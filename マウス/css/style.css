@@ -1,0 +1,31 @@
+#cursor {
+    transform: translate(0, 0);
+    pointer-events: none;
+    position: fixed;
+    top: -7px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    z-index: 999;
+    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+  }
+  #cursor.hover{
+    top: -18px;
+    left: -18px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.05);
+  border: solid 2px #6bb6ff;
+}
+#cursor.hover:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(https://dubdesign.net/wp-content/uploads/2021/10/sangoplus_001-2-1.svg) no-repeat;
+}
