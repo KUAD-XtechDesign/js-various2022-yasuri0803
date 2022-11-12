@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トップページ</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<script src="js/lightbox.min.js"></script>
+<body>
+  <div class="up"></div>
+  <div class="down"></div>
+  <div class="line"></div>
+  <div class="hero">
+  </div>
+  <script>
+    $(".line").animate({"width":"100%"},1500,function(){
+      $(".line").css("right",0)
+      $(".line").animate({"width":"0%"},function(){
+        $(".up").animate({"height":"0%"});
+        $(".down").animate({"height":"0%"});
+      })
+    })
+  </script>
+     <header id="header">
+    <h1 class="site-title">本人！！！</h1>
+    <nav>
+      <ul>
+       <li>
+         <a href="https://twitter.com/naciiocha0919" target="_blank">
+          <img class="icon" src="images/やすりちゃん.jpg" alt="twitter">
+        </a>
+       </li>
+      </ul>
+    </nav>
+      </header>
+<script src="script.js"></script>
+      <main>
+         <div id="mainvisual">
+           <picture>
+             <source media="(max-width: 600px)" srcset="img/#">
+             <img src="images/ちびおろ.jpg" alt="おろ">
+           </picture>
+         </div>
+         <section id="address" class="wrapper">
+           <h2 class="sec-tittle">プロフィールだよ！
+           </h2>
+           <ul>
+             <li>おろ</li>
+             <li>とっても愚か者</li>
+             <li>tel: 000-1214-3388</li>
+             <li>url:www.samenofukahire.jp</li>
+             <li>mail:samesan_sukusuki@xxxxxx.jp</li>
+           </ul>
+           <p>初めまして。愚かなさめの子、｢おろ」です。<br>
+            <div class="omi">
+              <button onclick="draw()">おろの生態を見る───</button>
+              <p>おろの生態は、<span id="fortune" class="fortune">？</span>だ。</p>
+              <div>
+            <script>
+               const results = [
+                 '常にさめを抱き抱えてないと死ぬ。さめが好きで好きで仕方ない女の子',
+                 'ぬいぐるみのようなさめは生きていて、おろの感情に忠実───',
+                 '頭の猫耳みたいなやつは髪型であり決して耳ではない',
+                 '魚の骨をこよなく愛す、魚モチーフに目が無い',
+                 'ただとっても愚か者なので、救いようがないほどポンコツなのだ',
+                 '魚は食べるのも鑑賞するのも大好きだよ'
+               ]
+                function draw(){
+                 const key = Math.floor (Math.random()*4)
+                console.log(key)
+                 const fortune = document.getElementById("fortune")
+                 fortune.textContent = results[key]
+              }
+            </script>
+         </section>
+
+         <section id="works" class="wrapper">
+             <h2 class="sec-tittle">おろのこと知ってね❤︎</h2>
+          <ul>
+             <li><img src="images/おろチェキ.jpg"alt="サービスショット❤︎"></li>
+             <a href="images/おろチェキ.JPG" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+             <li><img src="images/きらきらおろ.jpg" alt="さかなさかな~"></li>
+             <a href="images/きらきらおろ.jpg" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+             <li><img src="images/おろ.gif" alt="まばたき厳禁！"></li>
+             <a href="images/おろ.gif" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+             <li><img src="images/おろ初期.gif" alt="動くよ！"></li>
+             <a href="images/おろ初期.gif" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+             <li><img src="images/やすり.JPG" alt="こっちは相棒！"></li>
+             <a href="images/やすり.JPG" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+          </ul>
+          
+         </section>
+         <section id="career" class="wrapper">
+           <h2 class="sec-tittle">おろの過去だよ！</h2>
+           <dl>
+             <dt>20xx.12.14</dt>
+             <dd>爆誕</dd>
+             <dt>20xx.12.14</dt>
+             <dd>5歳の誕生日にさめの魅力に気づく</dd>
+             <dt>20xx.xx,xx</dt>
+             <dd>現在過去未来生涯永久さめが好き</dd>
+           </dl>
+         </section>
+         <section id="contact" class="wrapper">
+           <h2 class="sec-tittle">おろへのコンタクトだよ！</h2>
+           <form action="#" method="post">
+             <dl>
+               <dt><label for="name">Name</label></dt>
+               <dd><input type="text" id="name" name="your-name"></dd>
+               <dt><label for="email">Email</label></dt>
+               <dd><input type="email" id="email" name="your-email"></dd>
+               <dt><label for="massage">Massage</label></dt>
+               <dd><textarea name="your-messag" id="message" ></textarea></dd>
+             </dl>
+             <div class="button"><input type="submit" value="send"></div>
+           </form>
+         </section>
+      </main>
+      <footer id="footer">
+        <p> &copy; 20xx.xx.xx────这只是奥罗生活中的一页、他是一个鲨鱼爱好者。</p>
+      </footer>
+</body>
+
+</html>
